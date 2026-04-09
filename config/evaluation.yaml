@@ -1,0 +1,24 @@
+criteria:
+  accuracy:
+    weight: 0.30
+    description: 문서 내용과 답변이 사실 수준에서 일치하는 정도
+  groundedness:
+    weight: 0.25
+    description: 답변이 제공된 문서 근거 안에서 설명 가능한 정도
+  completeness:
+    weight: 0.20
+    description: 문제 해결에 필요한 핵심 요소를 충분히 포함하는 정도
+  no_hallucination:
+    weight: 0.15
+    description: 문서에 없는 내용을 임의로 추가하지 않은 정도
+  clarity:
+    weight: 0.10
+    description: 답변이 문장 수준에서 명확하고 모호하지 않은 정도
+
+score_policy:
+  max_score: 100
+  grade_bands:
+    excellent: [90, 100]
+    good: [75, 89]
+    fair: [60, 74]
+    poor: [0, 59]
